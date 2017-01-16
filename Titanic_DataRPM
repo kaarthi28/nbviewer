@@ -1,0 +1,10 @@
+import pandas as pd
+Location = r"E:\Titanic\train.csv"
+Titanic = pd.read_csv (Location)
+Titanic
+Titanic_mean = Titanic.copy(deep=True)
+Titanic_mean
+Titanic_mean.fillna(Titanic_mean.mean()["Age"])
+Titanic_linear = Titanic.copy(deep=True)
+Titanic_linear
+Titanic_linear.interpolate()
